@@ -13,6 +13,7 @@ GEM
   remote: http://rubygems.org/
   specs:
     addressable (2.3.2)
+    bouncy-castle-java (1.5.0146.1)
     builder (3.0.0)
     capybara (1.1.2)
       mime-types (>= 1.16)
@@ -29,13 +30,11 @@ GEM
       gherkin (~> 2.11.0)
       json (>= 1.4.6)
     diff-lcs (1.1.3)
-    ffi (1.1.4)
     ffi (1.1.4-java)
-    gherkin (2.11.1)
-      json (>= 1.4.6)
     gherkin (2.11.1-java)
       json (>= 1.4.6)
-    json (1.7.4)
+    jruby-openssl (0.7.7)
+      bouncy-castle-java (>= 1.5.0146.1)
     json (1.7.4-java)
     json_spec (1.0.3)
       multi_json (~> 1.0)
@@ -48,6 +47,8 @@ GEM
     rack (1.4.1)
     rack-test (0.6.1)
       rack (>= 1.0)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     rspec (2.11.0)
       rspec-core (~> 2.11.0)
       rspec-expectations (~> 2.11.0)
@@ -64,6 +65,7 @@ GEM
       rubyzip
     xpath (0.1.4)
       nokogiri (~> 1.3)
+    yajl-ruby (1.1.0)
 
 PLATFORMS
   java
@@ -72,4 +74,7 @@ DEPENDENCIES
   aruba!
   capybara
   cucumber
+  jruby-openssl
   json_spec
+  rest-client
+  yajl-ruby

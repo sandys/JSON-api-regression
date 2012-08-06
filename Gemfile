@@ -3,3 +3,6 @@ gem "aruba", :git => "https://github.com/iconoclast/aruba.git", :branch => "jrub
 gem "cucumber"
 gem "json_spec"
 gem "capybara"
+gem "yajl-ruby"
+gem "rest-client"
+gem "jruby-openssl"
