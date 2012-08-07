@@ -5,14 +5,15 @@ Feature: Output
     I want to use the "the output should contain" step
 
   Scenario: User list
-    When I post to "/users.json" with:
+    When I post to "http://twitter.com/users.json" with:
       """
       {
         "first_name": "Steve",
         "last_name": "Richert"
       }
       """
-    When I get "/users.json"
+
+    When I get "http://twitter.com/users.json"
     Then the JSON response should have 1 user
     And the JSON response at "0" should be:
       """

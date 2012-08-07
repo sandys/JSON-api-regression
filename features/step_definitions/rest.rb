@@ -6,10 +6,9 @@ require 'restclient'
 When /^I post to "(.*?)" with:$/ do |url, json_data|
   begin
     json = JSON.parse(json_data)
-    RestClient.post url, json, :content_type => :json, :accepts => :json
+    reply = RestClient.post url, json_data, :content_type => :json, :accepts => :json
+    @last_json = reply.body
     #post url, json_data
-  rescue => e
-    puts e
   end
 end
 
